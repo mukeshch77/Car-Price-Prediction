@@ -43,7 +43,7 @@ def train_test_split(X, y, test_size=0.2, random_state=42):
 X_train, X_test, y_train, y_test = train_test_split(X_scaled, y)
 
 # Mini-Batch Gradient Descent with L2 Regularization
-def mini_batch_gradient_descent(X, y, learning_rate=0.01, epochs=1000, batch_size=32, lambda_=0.01):
+def mini_batch_gradient_descent(X, y, learning_rate=0.01, epochs=1000, batch_size=28, lambda_=0.01):
     m, n = X.shape
     theta = np.zeros(n)
     loss_history = []
@@ -85,7 +85,7 @@ y_test_rescaled = y_test + y.min()
 y_pred_rescaled = y_pred + y.min()
 
 # Plot loss history
-plt.figure(figsize=(12, 6))
+plt.figure(figsize=(14, 7))
 
 plt.subplot(1, 2, 1)
 plt.plot(loss_history)
